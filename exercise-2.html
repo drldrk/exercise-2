@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>darkv2</title>
+	<style >
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #f4f4f4;
+			color: #333;
+			display: flex;
+			justify-content: center;	
+			align-items: center;
+			height: 100vh	;
+			margin: 0;
+		}
+		.background{
+			width: 100%;
+			min-height: 100vh;
+			background-image:url(IMG/bmountain.jfif);
+			background-size:cover;
+			background-position: center;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+	
+		}
+		
+		.wrapper{	overflow: hidden;
+			width: 90%;
+			max-width: 400px;            
+			background-color: transparent;
+			border-radius: 20px;
+			box-shadow: 0 4px 8px rgba(5, 6, 0, .1);
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			backdrop-filter: blur(20px);
+			border: 1px solid	;
+		}
+		.details{
+			background-color: #black;
+          color: whitesmoke;
+          text-align: center;
+          padding: 20px;
+          margin-bottom: 10px;
+
+		}
+		button {
+			font-size: 40px;
+			border-radius: 10px;
+			background-color: transparent;	
+			
+		}
+		input{
+			padding: 5px;
+			border-radius: 	5px	;
+			background-color: transparent;
+			margin: 10px	;
+			padding: 10px;
+			color: white;
+		}
+		p{
+			font-size: 	26px;
+			margin-bottom: 10px;
+			color: 	white;
+		}
+		
+	
+
+
+
+	</style>
+</head>
+<body>
+	<script>
+		function Login(){
+			var correctUsername ="dark";
+			var correctPassword ="123";
+			var typeusername = document.getElementById("username").value;
+			var typepassword = document.getElementById("password").value;
+			if(correctUsername==typeusername&&correctPassword==typepassword){
+				document.getElementById("notif").innerText="Login Succesfully"; 
+				window.location="home.html";
+			}else{
+				document.getElementById("notif").innerText="Login Failed. Please Try again";
+				Location.href="home.html";
+			}
+		}
+	</script>
+	
+	<div class="background">	
+
+
+	<div class="wrapper">
+
+
+		<header class="details">	
+		<label>ENTER USERNAME</label>
+		<input  id="username">
+		<label>ENTER PASSWORD</label>
+		<input id="password">
+		
+			<br>
+		<span id="notif"></span>
+		<br></br>	
+		<button onclick="Login()">Login</button>
+	
+
+		</header>
+	</div>
+</div>
+</body>
+</html>
